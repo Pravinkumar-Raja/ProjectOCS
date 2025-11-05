@@ -108,6 +108,14 @@ public class DoctorBean {
 	public void setEmailID(String emailID) {
 		this.emailID = emailID;
 	}
+	@Override
+	public String toString() {
+		return "DoctorBean [doctorID=" + doctorID + ", doctorName=" + doctorName + ", dateOfBirth=" + dateOfBirth
+				+ ", dateOfJoining=" + dateOfJoining + ", gender=" + gender + ", qualification=" + qualification
+				+ ", specialization=" + specialization + ", yearsOfExperience=" + yearsOfExperience + ", street="
+				+ street + ", location=" + location + ", city=" + city + ", state=" + state + ", pincode=" + pincode
+				+ ", contactNumber=" + contactNumber + ", emailID=" + emailID + "]";
+	}
 	
 	
 
