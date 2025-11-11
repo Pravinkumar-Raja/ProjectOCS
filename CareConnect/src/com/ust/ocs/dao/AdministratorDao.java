@@ -15,8 +15,9 @@ import com.ust.ocs.bean.PatientBean;
 import com.ust.ocs.service.Administrator;
 
 public class AdministratorDao implements Administrator{
-	static ArrayList <DoctorBean>al=new ArrayList<>();
-	static ArrayList <DoctorBean>ar=new ArrayList<>();
+	static ArrayList<DoctorBean> al=new ArrayList<>();
+	static ArrayList<DoctorBean> ar=new ArrayList<>();
+	static ArrayList<DoctorBean> view=new ArrayList<>();
 	
 	public Boolean login(CredentialBean creadential)
 	{
@@ -33,9 +34,10 @@ public class AdministratorDao implements Administrator{
 	
 	@Override
 	public String addDoctor(DoctorBean doctoerBean) {
+		
 		if(al.add(doctoerBean))
 		{
-			
+			System.out.println(al);
 			return "Doctor added Successfully";
 		}
 		
@@ -59,12 +61,16 @@ public class AdministratorDao implements Administrator{
 
 	@Override
 	public ArrayList<DoctorBean> viewAllDoctors() {
-		for(DoctorBean d:al)
+//	Iterator itr=al.iterator();
+//	if(itr.hasNext())
+//	{
+//		System.out.println(itr.next());
+//	}
+		System.out.println(view.size());
+		for(int i=0;i<view.size();i++)
 		{
-			System.out.println(d);
-//			JOptionPane.showMessageDialog(null, d);
+			System.out.println(view.get(i));
 		}
-		
 		return null;
 	}
 
